@@ -6,6 +6,7 @@ import ScheduleScreen from "../screens/ScheduleScreen";
 import MypageScreen from "../screens/MypageScreen";
 import IconUser from "../assets/icons/gnb_user.svg";
 import IconSchedule from "../assets/icons/gnb_schedule.svg";
+import SvgIcon from "../components/SvgIcon";
 
 const Tab = createBottomTabNavigator();
 
@@ -20,7 +21,8 @@ function Tabs() {
           shadowOpacity: 0,
           elevation: 0,
           height: 60,
-          borderTopWidth: 0, // 여기에 추가
+          borderTopWidth: 0,
+          paddingHorizontal: 80,
         },
       }}
     >
@@ -29,7 +31,7 @@ function Tabs() {
         component={ScheduleScreen}
         options={{
           tabBarIcon: ({ focused, color, size }) => {
-            return <IconSchedule width={size} height={size} fill={"none"} />;
+            return <SvgIcon name="GnbSchedule" size={size} />;
           },
           headerShown: false,
         }}
@@ -39,7 +41,7 @@ function Tabs() {
         component={HomeScreen}
         options={{
           tabBarIcon: ({ focused, color, size }) => {
-            return <IconUser width={size} height={size} fill={"none"} />;
+            return <SvgIcon name="Logo" size={size + 30} />;
           },
           headerShown: false,
         }}
@@ -49,7 +51,7 @@ function Tabs() {
         component={MypageScreen}
         options={{
           tabBarIcon: ({ focused, color, size }) => {
-            return <IconSchedule width={size} height={size} fill={"none"} />;
+            return <SvgIcon name="GnbUser" size={size} />;
           },
           headerShown: false,
         }}
