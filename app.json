@@ -1,0 +1,18 @@
+{
+  "expo": {
+    "name": "rn-scheduler",
+    "slug": "rn-scheduler",
+    "version": "1.0.0",
+    "assetBundlePatterns": ["**/*"],
+    "plugins": [
+      [
+        "expo-calendar",
+        {
+          "calendarPermission": "The app needs to access your calendar."
+        }
+      ],
+      "expo-font"
+    ]
+  },
+  "name": "rn-scheduler"
+}
