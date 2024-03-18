@@ -1,24 +1,22 @@
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import ScheduleDetailScreen from "../screens/ScheduleDetailScreen";
 
 const NativeStack = createNativeStackNavigator();
 
 const Stack = () => {
-  const theme = useTheme();
+  // const theme = useTheme();
 
   return (
     <NativeStack.Navigator
       screenOptions={{
-        headerBackTitleVisible: false,
-        headerStyle: {
-          backgroundColor: theme.header,
-        },
-        headerTitleStyle: {
-          color: theme.headerTitle,
-        },
+        headerShown: false,
       }}
     >
-      <NativeStack.Screen name="Detail" component={Detail} />
+      <NativeStack.Screen
+        name="ScheduleDetail"
+        component={ScheduleDetailScreen}
+      />
     </NativeStack.Navigator>
   );
 };
